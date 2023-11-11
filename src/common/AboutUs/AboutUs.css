@@ -26,3 +26,7 @@
     font-family: 'Sancreek', cursive;
     width: 30em;
 }
+
+.colourText {
+    color: var(--azul)
+}
