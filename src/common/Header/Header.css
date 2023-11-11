@@ -1,0 +1,24 @@
+.headerDesign {
+
+    height: 8vh;
+    width: 100vw;
+
+    background-color: rgb(0, 0, 0);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.headerLogo {
+    height: 3.7em;
+    width: 3.7em;
+    margin-right: 2em;
+    padding-left:1em ;
+}
+
+.headerLogo:hover {
+    cursor: pointer;
+    scale: 1.05;
+}

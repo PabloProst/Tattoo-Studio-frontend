@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
+.linkButtonDesign {
+
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    transition: 0.4s;
+    margin-right: 2em;
+    margin-bottom: 0.5em;
+    font-family: 'Sancreek', cursive;
+}
+
+.linkButtonDesign:hover {
+
+    transition: 0.4s;
+    color: grey;
+    cursor: pointer;
+}
