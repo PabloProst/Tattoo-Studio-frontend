@@ -43,27 +43,8 @@ export const Login = () => {
   }
 
   return (
-    <div className="loginDesign">
-      <CustomInput
-        design={"inputDesign"}
-        type={"email"}
-        name={"email"}
-        placeholder={""}
-        // value={}
-        functionProp={functionHandler}
-        // onBlur={}
-      />
-      <CustomInput
-        design={"inputDesign"}
-        type={"password"}
-        name={"password"}
-        placeholder={""}
-        // value={}
-        functionProp={functionHandler}
-        // onBlur={}
-      />
-      <div className='buttonSubmit' onClick={logMe}>Log Me!</div>
-      <div>{msgError}</div>
-    </div>
+      <div>
+        
+      </div>
   );
 };

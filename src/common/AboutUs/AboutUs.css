@@ -22,11 +22,33 @@
 .textAboutUs {
     color: white;
     font-size: 1.3em;
-    margin-left: 10px;
+    margin-left: 0.625em;
     font-family: 'Sancreek', cursive;
     width: 30em;
 }
 
 .colourText {
     color: var(--azul)
+}
+
+.buttonBookDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.appointmentAboutUs {
+    border: solid 1px var(--azul);
+    width: 10em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appointmentAboutUs:hover {
+    cursor: pointer;
+    color: var(--azul);
+
 }
