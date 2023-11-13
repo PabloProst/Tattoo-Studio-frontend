@@ -1,16 +1,18 @@
 import {React} from 'react';
 import "./Home.css";
-import { Header } from "../../common/Header/Header";
 import { Banner } from '../../common/BannerHome/BannerHome';
 import { AboutUs } from '../../common/AboutUs/AboutUs';
 import { Information } from '../../common/Information/Information';
+import { TattooStyles } from '../../common/TattooStyles/TattooStyles';
+import { StaticNavbar } from '../../common/StaticNavbar/StaticNavbar';
 
 export const Home = () => {
   return (
     <div>
-      <div><Header/></div>
+      <div><StaticNavbar/></div>
       <div><Banner/></div>
       <div><AboutUs/></div>
+      <div><TattooStyles/></div>
       <div><Information/></div>
     </div>
   );

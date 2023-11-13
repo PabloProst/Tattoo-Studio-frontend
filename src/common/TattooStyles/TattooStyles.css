@@ -1,0 +1,47 @@
+.tattooStyles {
+    width: 100vw;
+    height: 40em;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Sancreek', cursive;
+    background-image: url('../../assets/img/bannerStyles.jpg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.tattooInfo {
+    color: var(--azul);
+    font-size: 5em;
+    margin-top: 1em;
+}
+
+.stylesInfo {
+    color: white;
+    font-size: 20px;
+    width: 50%;
+
+}
+
+.stylesBanner {
+    filter: saturate(2);
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10em;
+}
+
+.image-tattoo {
+    max-width: 25%;
+    height: auto;
+    border: solid 2px white;
+  }
+
+  .image-tattoo:hover {
+    scale: 1.1;
+    transition: 0.2s;
+  }
