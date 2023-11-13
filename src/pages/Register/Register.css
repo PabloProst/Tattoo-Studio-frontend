@@ -1,0 +1,50 @@
+.registerDesign {
+
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+}
+
+.errorMsg {
+    color: red;
+    margin-top: -50px;
+}
+
+.buttonSubmit {
+
+    height: 3em;
+    width: 8em;
+
+    border-radius: 1em;
+    background-color: transparent;
+    color: white;
+    font-weight: bolder;
+    border: solid 2px var(--azul);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.buttonSubmit:hover {
+
+    transition: 0.4s;
+    background-color: white;
+    cursor: pointer;
+    color: var(--azul);
+}
+
+label {
+    color: white;
+}
+
+input {
+ 
+}

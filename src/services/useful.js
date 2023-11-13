@@ -1,4 +1,3 @@
-
 export const validator = (type, value) => {
 
     switch(type){
@@ -12,7 +11,7 @@ export const validator = (type, value) => {
             } else {
                 return "";
             }
-        
+
         case 'name':
         case 'surname':
 
