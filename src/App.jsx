@@ -1,16 +1,15 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Routes, Route } from 'react-router-dom'
-import { Home } from './pages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { StaticNavbar } from './common/StaticNavbar/StaticNavbar';
+import { Body } from './pages/Body/body';
 
 function App() {
 
   return (
     <>
-      <Routes>
-        <Route path='/' element={<Home/>} />
-      </Routes>
+      <StaticNavbar />
+      <Body />
     </>
   )
 }
