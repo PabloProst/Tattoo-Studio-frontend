@@ -26,7 +26,6 @@ export const Crew = () => {
                 <Col sm={12} lg={6} xl={2} xxl={2} key={index}>
                   <div>
                     <h3>{artistName}</h3>
-                    {/* No hay 'id', 'email' o 'style' en 'artistName', ya que ahora es solo un nombre */}
                   </div>
                 </Col>
               );

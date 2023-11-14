@@ -33,6 +33,24 @@ export const TattoosMade = () => {
         <Col xs={6} sm={3} md={3} lg={3}>
           <img className='image-gallery' src='../src/assets/img/TATTOO18.jpg' alt='Tattoo' />
         </Col>
+        <Col xs={6} sm={3} md={3} lg={3}>
+          <img className='image-gallery' src='../src/assets/img/TATTOO19.jpg' alt='Tattoo' />
+        </Col>
+        <Col xs={6} sm={3} md={3} lg={3}>
+          <img className='image-gallery' src='../src/assets/img/TATTOO20.jpg' alt='Tattoo' />
+        </Col>
+        <Col xs={6} sm={3} md={3} lg={3}>
+          <img className='image-gallery' src='../src/assets/img/TATTOO21.jpg' alt='Tattoo' />
+        </Col>
+        <Col xs={6} sm={3} md={3} lg={3}>
+          <img className='image-gallery' src='../src/assets/img/TATTOO22.jpg' alt='Tattoo' />
+        </Col>
+        <Col xs={6} sm={3} md={3} lg={3}>
+          <img className='image-gallery' src='../src/assets/img/TATTOO23.jpg' alt='Tattoo' />
+        </Col>
+        <Col xs={6} sm={3} md={3} lg={3}>
+          <img className='image-gallery' src='../src/assets/img/TATTOO24.jpg' alt='Tattoo' />
+        </Col>
       </Row>
     </Container>
   );

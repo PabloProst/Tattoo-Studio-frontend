@@ -8,7 +8,6 @@ export const CustomInput = ({design, type, name, placeholder, functionProp, func
             type={type}
             name={name}
             placeholder={placeholder}
-            // value={}
             onChange={(e)=>functionProp(e)}
             onBlur={(e)=>functionBlur(e)}
          />

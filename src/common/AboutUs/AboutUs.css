@@ -62,7 +62,7 @@
     }
 
     .aboutUsDiv {
-        flex-direction: column; /* Cambia la dirección de la columna para dispositivos más pequeños */
+        flex-direction: column;
         margin-top: 3em;
     }
 
