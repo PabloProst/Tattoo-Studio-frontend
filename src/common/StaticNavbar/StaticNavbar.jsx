@@ -2,9 +2,24 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import './StaticNavbar.css';
+import './StaticNavbar.css';4
+import { useSelector, useDispatch } from "react-redux";
+import { logout, userData } from "../../pages/userSlice";
+import { useNavigate } from 'react-router-dom';
+import { LinkButton } from '../../common/LinkButton/LinkButton';
 
 export const StaticNavbar = () => {
+  const dispatch = useDispatch();
+  const rdxCredentials = useSelector(userData);
+
+  const logOutMe = () => {
+
+    dispatch(logout( {credentials : ""}))
+
+    navigate("/")
+
+  }
+  
   return (
     <Navbar expand="lg" className="bg-dark navbarStatic fixed-top">
       <Container className='container-navbar'>
@@ -16,8 +31,19 @@ export const StaticNavbar = () => {
             <Nav.Link className='text-navbar items-navbar' href="/">HOME</Nav.Link>
             <Nav.Link className='text-navbar items-navbar' href="/gallery">GALLERY</Nav.Link>
             <Nav.Link className='text-navbar items-navbar' href="/crew">CREW</Nav.Link>
-            <Nav.Link className='text-navbar items-navbar' href="/login">LOGIN</Nav.Link>
-            <Nav.Link className='text-navbar items-navbar' href="/register">REGISTER</Nav.Link>
+            {!rdxCredentials?.credentials.token ? (
+        <>
+          <LinkButton path={"/login"} title={"Login"} />
+          <LinkButton path={"/register"} title={"Register"} />
+        </>
+      ) : (
+        <>
+          <LinkButton path={"/profile"} title={rdxCredentials.credentials.firstName} />
+          <div onClick={logOutMe}>
+            <LinkButton path={"/"} title={"log out"} />  
+          </div>
+        </>
+      )}
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,15 +1,18 @@
-
 import React, { useState, useEffect } from "react";
 import "./Login.css";
-
 import { CustomInput } from "../../common/CustomInput/CustomInput";
 import { validator } from "../../services/useful";
-import { registerUser } from "../../services/apiCalls";
 import { useNavigate } from 'react-router-dom';
+import { logUser } from "../../services/apiCalls";
+//redux
+import { useDispatch } from "react-redux";  //useDispatch es necesario para emitir acciones
+import { login } from "../userSlice";
 
 export const Login = () => {
 
   const navigate = useNavigate();
+  
+  const dispatch = useDispatch();
 
   const [user, setUser] = useState({
     email: '',
@@ -56,9 +59,11 @@ export const Login = () => {
       }
     }
 
-    loginUser(user)
+    logUser(user)
     .then(
       resultado => {
+        dispatch(login({ credentials: resultado.data }))
+        console.log(resultado.data);
         setTimeout(() => {
           alert("Logueado")
           navigate("/");
