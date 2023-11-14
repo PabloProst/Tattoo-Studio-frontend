@@ -5,9 +5,10 @@
     width: 15em;
 
     border-radius: 1em;
-    border: 0.5 solid darkcyan;
+    border: 3px solid var(--azul);
 
     margin-bottom: 4em;
+
 }
 
 .inputDesignError {

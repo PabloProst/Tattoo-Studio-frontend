@@ -1,11 +1,17 @@
-
 import axios from 'axios';
 
-export const bringCharacters = async () => {
+export const bringArtists = async () => {
+  try {
+    const response = await axios.get('http://localhost:3430/list');
+    const artists = response.data; // Suponiendo que la respuesta de la API es un array de objetos con las propiedades correctas
+    const artistNames = artists.map(artist => artist.name);
 
-    return await axios.get(`https://rickandmortyapi.com/api/character/?page=6`);
-}
-
+    return artistNames;
+  } catch (error) {
+    console.error('Error fetching artists:', error);
+    throw error; // Puedes manejar los errores según tus necesidades
+  }
+};
 export const logUser = async (body) => {
 
     let user = {
@@ -17,8 +23,12 @@ export const logUser = async (body) => {
 
 }
 
-export const registerUser = async (body) => {
-    //SIMULACRO DE CONEXION REAL A API
-    // return await axios.post(`elendpointdemipreciosobackend`, body);
-    return "todo ha ido bien"
-}
+export const registerUser = async (userData) => {
+    try {
+      const response = await axios.post('http://localhost:3430/register', userData);
+      return response.data;
+    } catch (error) {
+      console.error('Error registering user:', error);
+      throw error;
+    }
+  };

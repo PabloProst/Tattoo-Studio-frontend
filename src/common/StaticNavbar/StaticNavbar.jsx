@@ -6,7 +6,7 @@ import './StaticNavbar.css';
 
 export const StaticNavbar = () => {
   return (
-    <Navbar expand="lg" className="bg-black navbarStatic fixed-top">
+    <Navbar expand="lg" className="bg-dark navbarStatic fixed-top">
       <Container className='container-navbar'>
         <Navbar.Brand><img className='headerLogo' src={'../src/assets/img/onlyLogo.png'} alt="Logo" /></Navbar.Brand>
         <Navbar.Brand className='text-white text-navbar-title' href="/">DYNAMIC <span className='blueColour'>INK</span></Navbar.Brand>

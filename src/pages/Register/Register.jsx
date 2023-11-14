@@ -13,14 +13,12 @@ export const Register = () => {
     name: '',
     email: '',
     password: '',
-    phone: ''
   })
 
   const [userError, setUserError] = useState({
     nameError: '',
     emailError: '',
     passwordError: '',
-    phoneError: ''
   })
 
 
@@ -44,32 +42,32 @@ export const Register = () => {
   }
 
   const Submit = () => {
-
-    for(let test1 in user){
-      if(user[test1] === ""){
-        return;
-      }
-
-    }
-
-    for(let test in userError){
-      if(userError[test] !== ""){
+    console.log(user); // Agrega este log para verificar los datos del usuario antes de la llamada a la API
+  
+    for (let test1 in user) {
+      if (user[test1] === "") {
         return;
       }
     }
-
+  
+    for (let test in userError) {
+      if (userError[test] !== "") {
+        return;
+      }
+    }
+  
     registerUser(user)
       .then(
         resultado => {
           //si todo ha ido bien, redirigiremos a login...
-
-          setTimeout(()=>{
+          setTimeout(() => {
             navigate("/login");
-          },500)
+          }, 500);
         }
       )
-      .catch(error=> console.log(error));
+      .catch(error => console.log(error));
   }
+  
 
   return (
     <div className="registerDesign">

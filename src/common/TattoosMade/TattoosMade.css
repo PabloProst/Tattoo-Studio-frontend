@@ -1,0 +1,23 @@
+/* TattoosMade.css */
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8em;
+    margin-top: 7.5em;
+  }
+  
+  .image-gallery {
+    width: 110%; 
+    height: auto;
+    max-width: 30em;
+    border-radius: 8px;
+    border: solid 2px white;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .image-gallery:hover {
+    transform: scale(1.05);
+  }
+  
