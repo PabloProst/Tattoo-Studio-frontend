@@ -12,17 +12,13 @@ export const Login = () => {
   const navigate = useNavigate();
 
   const [user, setUser] = useState({
-    name: '',
     email: '',
-    password: '',
-    phone: ''
+    password: ''
   })
 
   const [userError, setUserError] = useState({
-    nameError: '',
     emailError: '',
-    passwordError: '',
-    phoneError: ''
+    passwordError: ''
   })
 
 
@@ -60,18 +56,17 @@ export const Login = () => {
       }
     }
 
-    registerUser(user)
-      .then(
-        resultado => {
-          //si todo ha ido bien, redirigiremos a login...
-
-          setTimeout(()=>{
-            navigate("/login");
-          },500)
-        }
-      )
-      .catch(error=> console.log(error));
-  }
+    loginUser(user)
+    .then(
+      resultado => {
+        setTimeout(() => {
+          alert("Logueado")
+          navigate("/");
+        }, 500);
+      }
+    )
+    .catch(error => console.log(error));
+}
 
   return (
     <div className="registerDesign">

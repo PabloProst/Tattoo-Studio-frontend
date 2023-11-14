@@ -15,7 +15,7 @@ export const bringArtists = async () => {
 export const logUser = async (body) => {
 
     let user = {
-        username : body.email,
+        email : body.email,
         password: body.password
     }
     //SIMULACRO DE CONEXION REAL A API

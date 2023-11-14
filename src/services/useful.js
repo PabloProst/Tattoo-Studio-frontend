@@ -13,35 +13,23 @@ export const validator = (type, value) => {
             }
 
         case 'name':
-        case 'surname':
 
-            if(value.length > 25){
-                return "Escribe un nombre correcto"
+            if(value.length > 25 || value.length < 3){
+                return "Name must be between 3 and 25 characters long"
             } else {
                 return ""
             }
 
-        case 'phone':
-        case 'telefono':
-
-            if (! /(?=.*?[0-9])/.test(value) ) {
-                return "Incorrect phone number";
-            } else {
-                return "";
-            }
-
         case 'password':
-        case 'password2':
-        case 'contraseña':
 
             if(value.length < 8){
-                return "Write 8 characters at least"
+                return "The password must be at least 8 characters long, include at least one number, and have a special character."
             } else {
 
                 //Checking the password format....
 
-                if (! /[\d()+-]/g.test(value) ) {
-                    return "Invalid password format";
+                if (! /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/g.test(value) ) {
+                    return "The password must be at least 8 characters long, include at least one number, and have a special character.";
                 } else {
                     return "";
                 }
