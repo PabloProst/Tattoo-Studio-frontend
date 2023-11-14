@@ -42,7 +42,7 @@ export const Register = () => {
   }
 
   const Submit = () => {
-    console.log(user); // Agrega este log para verificar los datos del usuario antes de la llamada a la API
+    console.log(user);
   
     for (let test1 in user) {
       if (user[test1] === "") {
@@ -59,8 +59,8 @@ export const Register = () => {
     registerUser(user)
       .then(
         resultado => {
-          //si todo ha ido bien, redirigiremos a login...
           setTimeout(() => {
+            alert("Registrado")
             navigate("/login");
           }, 500);
         }

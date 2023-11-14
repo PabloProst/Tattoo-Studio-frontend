@@ -55,3 +55,40 @@
     background-color: white;
     scale: 1.02;
 }
+
+@media screen and (max-width: 768px) {
+    .aboutUsDesign {
+        height: 37em;
+    }
+
+    .aboutUsDiv {
+        flex-direction: column; /* Cambia la dirección de la columna para dispositivos más pequeños */
+        margin-top: 3em;
+    }
+
+    .aboutUsLogo {
+        height: 0em; 
+        width: 100%;
+        max-width: 0em; 
+    }
+
+    .textAboutUs {
+        margin-left: 0;
+        width: 80%;
+        text-align: center; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .aboutUsDesign {
+        height: 40em;
+    }
+
+    .aboutUsLogo {
+        max-width: 0em;
+    }
+
+    .textAboutUs {
+        font-size: 0.9em;
+    }
+}

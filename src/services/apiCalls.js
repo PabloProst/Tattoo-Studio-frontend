@@ -19,7 +19,7 @@ export const logUser = async (body) => {
         password: body.password
     }
     //SIMULACRO DE CONEXION REAL A API
-    return await axios.post(`https://dummyjson.com/auth/login`, user);
+    return await axios.post(`http//localhost:3430/login`, user);
 
 }
 

@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: 120%;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
@@ -21,4 +21,20 @@
     height: 120%;
   }
 
-  
+  @media screen and (max-width: 768px) {
+    .logoPage {
+        width: 80%;
+      }
+      .background-banner{
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit:fill;
+      }
+}
+
+@media screen and (max-width: 480px) {
+    .logoPage {
+        width: 60%;
+}
+}
