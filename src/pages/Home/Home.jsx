@@ -9,7 +9,6 @@ import { StaticNavbar } from '../../common/StaticNavbar/StaticNavbar';
 export const Home = () => {
   return (
     <div>
-      <div><StaticNavbar/></div>
       <div><Banner/></div>
       <div><AboutUs/></div>
       <div><TattooStyles/></div>

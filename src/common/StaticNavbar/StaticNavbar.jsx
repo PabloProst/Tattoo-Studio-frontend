@@ -33,14 +33,14 @@ export const StaticNavbar = () => {
             <Nav.Link className='text-navbar items-navbar' href="/crew">CREW</Nav.Link>
             {!rdxCredentials?.credentials.token ? (
         <>
-          <LinkButton path={"/login"} title={"Login"} />
-          <LinkButton path={"/register"} title={"Register"} />
+          <LinkButton className='user-items-navbar' path={"/login"} title={"LOGIN"} />
+          <LinkButton path={"/register"} title={"REGISTER"} />
         </>
       ) : (
         <>
-          <LinkButton path={"/profile"} title={rdxCredentials.credentials.firstName} />
+          <LinkButton path={"/profile"} title={rdxCredentials.credentials.email} />
           <div onClick={logOutMe}>
-            <LinkButton path={"/"} title={"log out"} />  
+            <LinkButton path={"/"} className="log-out-button" title={"LOG OUT"} />  
           </div>
         </>
       )}

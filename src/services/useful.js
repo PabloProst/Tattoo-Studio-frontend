@@ -15,7 +15,7 @@ export const validator = (type, value) => {
         case 'name':
 
             if(value.length > 25 || value.length < 3){
-                return "Name must be between 3 and 25 characters long"
+                return "Name must be between 3 and 25 character long"
             } else {
                 return ""
             }
@@ -23,13 +23,13 @@ export const validator = (type, value) => {
         case 'password':
 
             if(value.length < 8){
-                return "The password must be at least 8 characters long, include at least one number, and have a special character."
+                return "The password must be at least 8 character long, include at least one number, and have a special character."
             } else {
 
                 //Checking the password format....
 
                 if (! /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/g.test(value) ) {
-                    return "The password must be at least 8 characters long, include at least one number, and have a special character.";
+                    return "The password must be at least 8 character long, include at least one number, and have a special character.";
                 } else {
                     return "";
                 }

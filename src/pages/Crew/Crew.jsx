@@ -1,40 +1,47 @@
-import React, { useEffect, useState } from 'react';
-import { bringArtists } from '../../services/apiCalls';
-import { Container, Row, Col } from 'react-bootstrap';
-import './Crew.css';
+import React, { useState, useEffect } from 'react';
+import { GetCrew } from '../../services/apiCalls';
 
 export const Crew = () => {
-  const [artists, setArtists] = useState([]);
+
+  const [artists, setartists] = useState([]);
 
   useEffect(() => {
+
     if (artists.length === 0) {
-      bringArtists()
-        .then((results) => {
-          setArtists(results);
-        })
-        .catch((error) => console.log(error));
+      GetCrew()
+        .then(
+          artists => {
+            console.log(artists)
+            setartists(artists.data.data)
+          }
+        )
+        .catch(error => console.log(error))
     }
   }, [artists]);
 
+
   return (
-    <div className="crewDesign">
-      {artists.length > 0 ? (
-        <Container>
-          <Row>
-            {artists.map((artistName, index) => {
-              return (
-                <Col sm={12} lg={6} xl={2} xxl={2} key={index}>
-                  <div>
-                    <h3>{artistName}</h3>
-                  </div>
-                </Col>
-              );
-            })}
-          </Row>
-        </Container>
-      ) : (
-        <div>Aún no han venido artistas</div>
-      )}
+    <div>
+      {
+        artists.length > 0
+        ? ( 
+          <>
+              {
+                artists.map(
+                  artist => {
+                    console.log("hola");
+                    return (
+                      <div key={artist.id}>{artist.name}</div>
+                      )
+                    }
+                    )
+                  }
+            </>
+          )
+          : (
+            <div>Aún no han venido</div>
+            )
+          }
     </div>
-  );
-};
+  )
+}
