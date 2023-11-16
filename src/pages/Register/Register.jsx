@@ -73,30 +73,36 @@ export const Register = () => {
     <div className="registerDesign">
       <label>Email</label>
       <CustomInput
+      disabled={false}
         design={`inputDesign ${userError.emailError !== "" ? 'inputDesignError' : ''}`}
         type={"email"}
         name={"email"}
         placeholder={""}
+        value={""}
         functionProp={functionHandler}
         functionBlur={errorCheck}
       />
       <div className='errorMsg'>{userError.emailError}</div>
       <label>Password</label>
       <CustomInput
+      disabled={false}
         design={`inputDesign ${userError.passwordError !== "" ? 'inputDesignError' : ''}`}
         type={"password"}
         name={"password"}
         placeholder={""}
+        value={""}
         functionProp={functionHandler}
         functionBlur={errorCheck}
       />
       <div className='errorMsg'>{userError.passwordError}</div>
       <label>Name</label>
       <CustomInput
+      disabled={false}
         design={`inputDesign ${userError.nameError !== "" ? 'inputDesignError' : ''}`}
         type={"text"}
         name={"name"}
         placeholder={""}
+        value={""}
         functionProp={functionHandler}
         functionBlur={errorCheck}
       />

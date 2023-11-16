@@ -1,0 +1,13 @@
+.crew-design {
+  height: 100vh;
+  width: 100vw;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.artist-div {
+  color: white;
+}

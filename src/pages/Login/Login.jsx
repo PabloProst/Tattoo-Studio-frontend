@@ -4,14 +4,16 @@ import { CustomInput } from "../../common/CustomInput/CustomInput";
 import { validator } from "../../services/useful";
 import { useNavigate } from 'react-router-dom';
 import { logUser } from "../../services/apiCalls";
+
 //redux
 import { useDispatch } from "react-redux";  //useDispatch es necesario para emitir acciones
 import { login } from "../userSlice";
+import { jwtDecode } from "jwt-decode";
 
 export const Login = () => {
 
   const navigate = useNavigate();
-  
+
   const dispatch = useDispatch();
 
   const [user, setUser] = useState({
@@ -39,60 +41,66 @@ export const Login = () => {
     error = validator(e.target.name, e.target.value);
 
     setUserError((prevState) => ({
-        ...prevState,
-        [e.target.name + 'Error']: error,
+      ...prevState,
+      [e.target.name + 'Error']: error,
     }));
   }
 
   const Submit = () => {
 
-    for(let test1 in user){
-      if(user[test1] === ""){
+    for (let test1 in user) {
+      if (user[test1] === "") {
         return;
       }
 
     }
 
-    for(let test in userError){
-      if(userError[test] !== ""){
+    for (let test in userError) {
+      if (userError[test] !== "") {
         return;
       }
     }
 
-    logUser(user)
-    .then(
-      resultado => {
-        dispatch(login({ credentials: resultado.data }))
+    const { email, password } = user;
+
+    logUser({ email, password })
+      .then(resultado => {
+        let decodificado = jwtDecode(resultado.data.token);
+        console.log(`token decoded:`);
+        console.log(decodificado);
+        dispatch(login({ credentials: resultado.data }));
         console.log(resultado.data);
         setTimeout(() => {
-          alert("Logueado")
+          alert("Logueado");
           navigate("/");
         }, 500);
-      }
-    )
-    .catch(error => console.log(error));
-}
+      })
+      .catch(error => console.log(error));
+    
+  }
 
   return (
     <div className="registerDesign">
       <label>Email</label>
       <CustomInput
+        disabled={false}
         design={`inputDesign ${userError.emailError !== "" ? 'inputDesignError' : ''}`}
         type={"email"}
         name={"email"}
         placeholder={""}
-        // value={}
+        value={""}
         functionProp={functionHandler}
         functionBlur={errorCheck}
       />
       <div className='errorMsg'>{userError.emailError}</div>
       <label>Password</label>
       <CustomInput
+        disabled={false}
         design={`inputDesign ${userError.passwordError !== "" ? 'inputDesignError' : ''}`}
         type={"password"}
         name={"password"}
         placeholder={""}
-        // value={}
+        value={""}
         functionProp={functionHandler}
         functionBlur={errorCheck}
       />

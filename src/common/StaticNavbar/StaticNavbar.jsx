@@ -15,9 +15,6 @@ export const StaticNavbar = () => {
   const logOutMe = () => {
 
     dispatch(logout( {credentials : ""}))
-
-    navigate("/")
-
   }
   
   return (
@@ -38,7 +35,7 @@ export const StaticNavbar = () => {
         </>
       ) : (
         <>
-          <LinkButton path={"/profile"} title={rdxCredentials.credentials.email} />
+          <LinkButton path={"/profile"} title={rdxCredentials.credentials.name} />
           <div onClick={logOutMe}>
             <LinkButton path={"/"} className="log-out-button" title={"LOG OUT"} />  
           </div>
