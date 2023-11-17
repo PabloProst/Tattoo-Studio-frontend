@@ -21,6 +21,8 @@ export const registerUser = async (body) => {
    return await axios.post('http://localhost:3430/register', body);
   };
 
+
+
   export const updateProfile = async (profile, datosRdxUser) => {
     try {
       const tokenHeader = {
@@ -35,5 +37,18 @@ export const registerUser = async (body) => {
     }
   };
 
-  
+
+
+  export const listAppointments = async (datosRdxUser) => {
+    try {
+      const tokenHeader = {
+        headers: {
+          'Authorization': `Bearer ${datosRdxUser.credentials.token}`
+        }
+      };
+      return await axios.get('http://localhost:3430/update', tokenHeader);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 

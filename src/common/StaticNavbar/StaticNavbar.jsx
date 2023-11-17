@@ -5,8 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import './StaticNavbar.css'; 4
 import { useSelector, useDispatch } from "react-redux";
 import { logout, userData } from "../../pages/userSlice";
-import { useNavigate } from 'react-router-dom';
-import { LinkButton } from '../../common/LinkButton/LinkButton';
+
 
 export const StaticNavbar = () => {
   const dispatch = useDispatch();
