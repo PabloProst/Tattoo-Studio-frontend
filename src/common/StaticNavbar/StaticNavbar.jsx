@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import './StaticNavbar.css';4
+import './StaticNavbar.css'; 4
 import { useSelector, useDispatch } from "react-redux";
 import { logout, userData } from "../../pages/userSlice";
 import { useNavigate } from 'react-router-dom';
@@ -14,9 +14,9 @@ export const StaticNavbar = () => {
 
   const logOutMe = () => {
 
-    dispatch(logout( {credentials : ""}))
+    dispatch(logout({ credentials: "" }))
   }
-  
+
   return (
     <Navbar expand="lg" className="bg-dark navbarStatic fixed-top">
       <Container className='container-navbar'>
@@ -29,18 +29,18 @@ export const StaticNavbar = () => {
             <Nav.Link className='text-navbar items-navbar' href="/gallery">GALLERY</Nav.Link>
             <Nav.Link className='text-navbar items-navbar' href="/crew">CREW</Nav.Link>
             {!rdxCredentials?.credentials.token ? (
-        <>
-          <LinkButton className='user-items-navbar' path={"/login"} title={"LOGIN"} />
-          <LinkButton path={"/register"} title={"REGISTER"} />
-        </>
-      ) : (
-        <>
-          <LinkButton path={"/profile"} title={rdxCredentials.credentials.name} />
-          <div onClick={logOutMe}>
-            <LinkButton path={"/"} className="log-out-button" title={"LOG OUT"} />  
-          </div>
-        </>
-      )}
+              <>
+                <Nav.Link className='text-navbar items-navbar' href="/login">LOGIN</Nav.Link>
+                <Nav.Link className='text-navbar items-navbar' href="/register">REGISTER</Nav.Link>
+              </>
+            ) : (
+              <>
+                <Nav.Link className='text-navbar items-navbar' href="/profile">{rdxCredentials.credentials.name}</Nav.Link>
+                <div onClick={logOutMe}>
+                  <Nav.Link className='text-navbar items-navbar' href="/">LOG OUT</Nav.Link>
+                </div>
+              </>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

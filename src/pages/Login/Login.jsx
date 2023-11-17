@@ -6,33 +6,40 @@ import { useNavigate } from 'react-router-dom';
 import { logUser } from "../../services/apiCalls";
 
 //redux
-import { useDispatch } from "react-redux";  //useDispatch es necesario para emitir acciones
-import { login } from "../userSlice";
+import { useSelector, useDispatch } from "react-redux";  //useDispatch es necesario para emitir acciones
+import { login, userData } from "../userSlice";
 import { jwtDecode } from "jwt-decode";
 
 export const Login = () => {
 
   const navigate = useNavigate();
-
+  const rdxUserData = useSelector(userData);
   const dispatch = useDispatch();
-
+  
+  
   const [user, setUser] = useState({
     email: '',
     password: ''
   })
-
+  
   const [userError, setUserError] = useState({
     emailError: '',
     passwordError: ''
   })
-
-
+  
+  useEffect(()=>{
+    if(rdxUserData.credentials.token){
+      navigate("/")
+    }
+  },[rdxUserData])
+  
   const functionHandler = (e) => {
     setUser((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
     }));
   };
+  
 
   const errorCheck = (e) => {
 

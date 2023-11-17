@@ -23,10 +23,10 @@ export const userSlice = createSlice({
           credentials: {}
         }
       }
-
+      
     }
-
-});
+    
+  });
 
 export const { login, logout } = userSlice.actions;
 
