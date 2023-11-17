@@ -197,8 +197,8 @@ export const Profile = () => {
         functionBlur={errorCheck}
       />
       {isEnabled
-        ? (<div className="editDesign" onClick={() => setIsEnabled(!isEnabled)}>Editar</div>)
-        : (<div className="sendDesign" onClick={() => sendData()}>Enviar</div>)
+        ? (<div className="editDesign" onClick={() => setIsEnabled(!isEnabled)}>EDIT</div>)
+        : (<div className="sendDesign" onClick={() => sendData()}>SAVE</div>)
       }
     </div>
   );

@@ -16,7 +16,7 @@
 .editDesign {
 
     height: 2em;
-    width: 10em;
+    width: 8em;
 
     display: flex;
     justify-content: center;
@@ -25,7 +25,8 @@
     background-color: orange;
 
     color: white;
-
+    font-size: small;
+    ;
     cursor: pointer;
 
     border-radius: 1em;
@@ -40,15 +41,16 @@
 
 .sendDesign {
     height: 2em;
-    width: 10em;
+    width: 8em;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: var(--azul);
+    background-color: greenyellow;
 
     color: white;
+    font-size: small;
 
     cursor: pointer;
 
