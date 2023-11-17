@@ -35,6 +35,7 @@ export const StaticNavbar = () => {
               </>
             ) : (
               <>
+               <Nav.Link className='text-navbar items-navbar' href="/appointments">APPOINTMENTS</Nav.Link>
                 <Nav.Link className='text-navbar items-navbar' href="/profile">{rdxCredentials.credentials.name}</Nav.Link>
                 <div onClick={logOutMe}>
                   <Nav.Link className='text-navbar items-navbar' href="/">LOG OUT</Nav.Link>
