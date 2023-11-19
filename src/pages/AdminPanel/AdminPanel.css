@@ -1,0 +1,43 @@
+.admin-panel-design {
+    height: 100vh;
+    width: 100vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+}
+
+.admin-panel-div{
+    background-color: beige;
+    height: 15em;
+    width: 15em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2em;
+    
+    border: solid 2px black;
+}
+
+.title-appo {
+    font-size: 2em;
+    color: black;
+}
+
+.btn-appo {
+    
+    background-color: white;
+    border: solid 1px black;
+    height: 2em;
+    width: 12em;
+    color: black;
+}
+
+.btn-appo:hover {
+    cursor: pointer;
+}

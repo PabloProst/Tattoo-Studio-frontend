@@ -39,16 +39,40 @@ export const registerUser = async (body) => {
 
 
 
-  export const listAppointments = async (datosRdxUser) => {
+  export const getAppointmentsUser = async (datosRdxUser) => {
     try {
       const tokenHeader = {
         headers: {
           'Authorization': `Bearer ${datosRdxUser.credentials.token}`
-        }
-      };
-      return await axios.get('http://localhost:3430/update', tokenHeader);
+      }
+        };
+      return await axios.get('http://localhost:3430/myappointments', tokenHeader);
     } catch (error) {
       console.log(error);
     }
   }
+  
 
+  export const logAdmin = async (body) => {
+
+    let artist = {
+        email : body.email,
+        password: body.password
+    }
+
+    return await axios.post(`http://localhost:3430/admin/login`, artist);
+}
+
+
+export const ListAllUsers = async () => {
+  try {
+    const tokenHeader = {
+      headers: {
+        'Authorization': `Bearer ${datosRdxUser.credentials.token}`
+    }
+      };
+      return await axios.get(`localhost:3430/admin/users`, tokenHeader);
+  } catch (error) {
+    console.log(error);
+  }
+}
