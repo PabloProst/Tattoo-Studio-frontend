@@ -69,3 +69,9 @@ export const ListAllUsers = async () => {
       return await axios.get(`http://localhost:3430/admin/users`);
 
 }
+
+export const ListAllAppointments = async () => {
+
+      return await axios.get(`http://localhost:3430/admin/allappointments`);
+
+}

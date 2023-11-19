@@ -10,6 +10,7 @@ import { MyAppointments } from '../MyAppointments/MyAppointments';
 import { AdminLogin } from '../AdminLogin/AdminLogin';
 import { AdminPanel } from '../AdminPanel/AdminPanel';
 import { AllUsers } from '../AllUsers/AllUsers';
+import { AllAppointments } from '../AllAppointments/AllAppointments';
 
 export const Body = () => {
     return (
@@ -27,6 +28,7 @@ export const Body = () => {
                 <Route path="/admin/login" element={<AdminLogin />} />
                 <Route path="/admin/panel" element={<AdminPanel />} />            
                 <Route path="/allusers" element={<AllUsers />} />            
+                <Route path="/allappointments" element={<AllAppointments />} />            
             </Routes>
         </>
     )

@@ -11,7 +11,7 @@ export const AdminPanel = () => {
             <div className='title-appo'>ADMIN</div>
             {/* <div className='btn-appo' onClick={() => navigate('/myappointments')}>LIST</div> */}
             <div className='btn-appo' onClick={() => navigate('/allusers')}>LIST ALL USERS</div>
-            <div className='btn-appo'>LIST ALL APOINTMENTS</div>
+            <div className='btn-appo' onClick={() => navigate('/allappointments')}>LIST ALL APOINTMENTS</div>
             </div>
         </div>
     );
