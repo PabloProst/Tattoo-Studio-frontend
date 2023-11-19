@@ -65,14 +65,7 @@ export const registerUser = async (body) => {
 
 
 export const ListAllUsers = async () => {
-  try {
-    const tokenHeader = {
-      headers: {
-        'Authorization': `Bearer ${datosRdxUser.credentials.token}`
-    }
-      };
-      return await axios.get(`localhost:3430/admin/users`, tokenHeader);
-  } catch (error) {
-    console.log(error);
-  }
+
+      return await axios.get(`http://localhost:3430/admin/users`);
+
 }
