@@ -47,6 +47,9 @@ export const StaticNavbar = () => {
                 {rdxCredentials.credentials.role === "superadmin" && (
                   <Nav.Link className='text-navbar items-navbar text-danger' href="/admin/panel">ADMIN PANEL</Nav.Link>
                 )}
+                {rdxCredentials.credentials.role === "admin" && (
+                  <Nav.Link className='text-navbar items-navbar text-warning' href="/artist/panel">ARTIST PANEL</Nav.Link>
+                )}
                 <div onClick={logOutMe}>
                   <Nav.Link className='text-navbar items-navbar' href="/">LOG OUT</Nav.Link>
                 </div>

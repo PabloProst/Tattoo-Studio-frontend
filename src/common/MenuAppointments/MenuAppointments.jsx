@@ -10,8 +10,6 @@ export const MenuAppointments = () => {
             <div className='title-appo'>APPOINTMENTS</div>
             <div className='btn-appo' onClick={() => navigate('/myappointments')}>MY APPOINTMENTS</div>
             <div className='btn-appo'>CREATE</div>
-            <div className='btn-appo'>EDIT</div>
-            <div className='btn-appo'>DELETE</div>
         </div>
     );
 };

@@ -32,8 +32,6 @@ export const validator = (type, value) => {
                 return "The password must be at least 8 character long, include at least one number, and have a special character."
             } else {
 
-                //Checking the password format....
-
                 if (! /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/g.test(value)) {
                     return "The password must be at least 8 character long, include at least one number, and have a special character.";
                 } else {

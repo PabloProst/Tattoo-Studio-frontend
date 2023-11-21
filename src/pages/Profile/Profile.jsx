@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { userData } from "../userSlice";
 import { updateProfile } from "../../services/apiCalls";
 import { useDispatch } from "react-redux";
+import { login } from "../userSlice";
 
 export const Profile = () => {
   const dispatch = useDispatch();

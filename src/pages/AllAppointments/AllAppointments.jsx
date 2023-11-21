@@ -29,7 +29,6 @@ export const AllAppointments = () => {
                 {
                   appointments.map(
                     appointments => {
-                      console.log("hola");
                       return (
                         <div className='appointments-div' key={appointments.id}>
                         <p>ID: {appointments.id}</p>

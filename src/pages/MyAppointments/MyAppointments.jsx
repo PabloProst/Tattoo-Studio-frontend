@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { MyAppointmentsUser } from '../../services/apiCalls';
+import { DeleteAppointment, MyAppointmentsUser } from '../../services/apiCalls';
 import './MyAppointments.css';
 import { useSelector } from "react-redux";
-import userSlice, { userData } from "../userSlice";
+import { userData } from "../userSlice";
 
 
 
 export const MyAppointments = () => {
   const [appointments, setAppointments] = useState([]);
-
   const rdxUserData = useSelector(userData);
 
   useEffect(() => {
@@ -22,6 +21,15 @@ export const MyAppointments = () => {
         .catch(error => console.log(error));
     }
   }, [appointments]);
+
+  const handleDeleteAppointment = async (id) => {
+    try {
+      await DeleteAppointment(rdxUserData.credentials.token);
+      setAppointments(prevAppointments => prevAppointments.filter(appointment => appointment.id !== id));
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className='appointments-design'>
@@ -37,6 +45,8 @@ export const MyAppointments = () => {
                         <p>ID: {appointment.id}</p>
                         <p>DATE: {appointment.date}</p>
                         <p>TIME: {appointment.time}</p>
+                        <p>ARTIST: {appointment.artist.name}</p>
+                        <button onClick={() => handleDeleteAppointment(appointment.id)} className='text-danger bg-dark'>Delete</button>
                         <div>===========================</div>
                       </div>
                     </div>
@@ -46,7 +56,7 @@ export const MyAppointments = () => {
             </>
           )
           : (
-            <div>Aún no han venido</div>
+            <div>No appointments</div>
           )
       }
     </div>
