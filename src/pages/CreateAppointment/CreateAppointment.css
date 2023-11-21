@@ -1,0 +1,24 @@
+.create-appointments-design {
+    height: 100vh;
+    width: 100vw;
+
+    background-color: cornflowerblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-appointment-div{
+    height: 20em;
+    width: 20em;
+
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: white;
+    border: solid 3px black;
+
+}

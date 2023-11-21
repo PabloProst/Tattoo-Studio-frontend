@@ -73,3 +73,12 @@ export const DeleteAppointment = async (token) => {
     headers: { Authorization: `Bearer ${token}` },
   });
 };
+
+
+export const CreateAppointment = async (token, appointmentData) => {
+  return await axios.post("http://localhost:3430/appointment/new", appointmentData,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+};

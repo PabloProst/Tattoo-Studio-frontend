@@ -42,7 +42,6 @@ export const MyAppointments = () => {
                   return (
                     <div className='my-appointment-container'>
                       <div className='appointments-div' key={appointment.id}>
-                        <p>ID: {appointment.id}</p>
                         <p>DATE: {appointment.date}</p>
                         <p>TIME: {appointment.time}</p>
                         <p>ARTIST: {appointment.artist.name}</p>

@@ -9,7 +9,7 @@ export const MenuAppointments = () => {
         <div className="menu-design">
             <div className='title-appo'>APPOINTMENTS</div>
             <div className='btn-appo' onClick={() => navigate('/myappointments')}>MY APPOINTMENTS</div>
-            <div className='btn-appo'>CREATE</div>
+            <div className='btn-appo' onClick={() => navigate('/newappointment')}>CREATE</div>
         </div>
     );
 };
