@@ -19,8 +19,7 @@ export const userSlice = createSlice({
       logout: (state, action) => {
         return {
           ...state,
-          ...action.payload,
-          credentials: {}
+          ...action.payload
         }
       }
       

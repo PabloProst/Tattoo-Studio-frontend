@@ -37,22 +37,6 @@ export const registerUser = async (body) => {
     }
   };
 
-
-
-  export const getAppointmentsUser = async (datosRdxUser) => {
-    try {
-      const tokenHeader = {
-        headers: {
-          'Authorization': `Bearer ${datosRdxUser.credentials.token}`
-      }
-        };
-      return await axios.get('http://localhost:3430/myappointments', tokenHeader);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  
-
   export const logAdmin = async (body) => {
 
     let artist = {
@@ -75,3 +59,8 @@ export const ListAllAppointments = async () => {
       return await axios.get(`http://localhost:3430/admin/allappointments`);
 
 }
+
+export const MyAppointmentsUser = async (token) => {
+    return await axios.get('http://localhost:3430/myappointments', {
+      headers: { Authorization: `Bearer ${token}` }})
+    }

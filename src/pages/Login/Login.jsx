@@ -78,7 +78,6 @@ export const Login = () => {
         dispatch(login({ credentials: resultado.data }));
         console.log(resultado.data);
         setTimeout(() => {
-          alert("Logueado");
           navigate("/");
         }, 500);
       })

@@ -12,7 +12,6 @@ export const AllAppointments = () => {
         ListAllAppointments()
           .then(
             appointments => {
-              console.log(appointments)
               setAppointments(appointments.data.appointments)
             }
           )
@@ -32,8 +31,14 @@ export const AllAppointments = () => {
                     appointments => {
                       console.log("hola");
                       return (
-                        <div className='appointments-div' key={appointments.id}>{appointments.id}</div>
-                        )
+                        <div className='appointments-div' key={appointments.id}>
+                        <p>ID: {appointments.id}</p>
+                        <p>Fecha: {appointments.date}</p>
+                        <p>user: {appointments.user.name}</p>
+                        <p>artist: {appointments.artist.name}</p>
+                        <p>style: {appointments.artist.style}</p>
+                        <div>===========================</div>
+                      </div>                        )
                       }
                       )
                     }

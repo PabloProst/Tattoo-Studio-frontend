@@ -78,7 +78,6 @@ export const AdminLogin = () => {
         dispatch(login({ credentials: resultado.data, role: decodificado.role }));
         console.log(resultado.data);
         setTimeout(() => {
-          alert("Logueado");
           navigate("/");
         }, 500);
       })
