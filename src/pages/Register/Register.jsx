@@ -70,6 +70,7 @@ export const Register = () => {
 
   return (
     <div className="registerDesign">
+      <div className="register-border">
       <label>Email</label>
       <CustomInput
       disabled={false}
@@ -107,6 +108,7 @@ export const Register = () => {
       />
       <div className='errorMsg'>{userError.nameError}</div>
       <div className='buttonSubmit' onClick={Submit}>Register</div>
+    </div>
     </div>
   );
 };

@@ -12,6 +12,8 @@ import { AdminPanel } from '../AdminPanel/AdminPanel';
 import { AllUsers } from '../AllUsers/AllUsers';
 import { AllAppointments } from '../AllAppointments/AllAppointments';
 import { CreateAppointmentUser } from '../CreateAppointment/CreateAppointment';
+import { ArtistPanel } from '../ArtistPanel/ArtistPanel';
+import { ArtistAppointments } from '../ArtistAppointments/ArtistAppointments';
 
 export const Body = () => {
     return (
@@ -31,6 +33,8 @@ export const Body = () => {
                 <Route path="/allusers" element={<AllUsers />} />            
                 <Route path="/allappointments" element={<AllAppointments />} />            
                 <Route path="/newappointment" element={<CreateAppointmentUser />} />            
+                <Route path="/artist/panel" element={<ArtistPanel />} />            
+                <Route path="/artist/appointments" element={<ArtistAppointments />} />            
             </Routes>
         </>
     )

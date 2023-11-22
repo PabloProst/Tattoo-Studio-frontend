@@ -87,6 +87,7 @@ export const AdminLogin = () => {
 
   return (
     <div className="registerDesign">
+      <div className="admin-login">
       <label>Email</label>
       <CustomInput
         disabled={false}
@@ -112,6 +113,7 @@ export const AdminLogin = () => {
       />
       <div className='errorMsg'>{userError.passwordError}</div>
       <div className='buttonSubmit' onClick={Submit}>Login</div>
+    </div>
     </div>
   );
 };

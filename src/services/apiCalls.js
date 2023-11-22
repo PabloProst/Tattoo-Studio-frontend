@@ -82,3 +82,9 @@ export const CreateAppointment = async (token, appointmentData) => {
     }
   );
 };
+
+export const MyArtistAppointments = async (token) => {
+  return await axios.get("http://localhost:3430/admin/myappointments", {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+};

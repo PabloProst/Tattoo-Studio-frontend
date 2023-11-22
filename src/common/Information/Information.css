@@ -13,7 +13,7 @@
     font-size: 2em;
     display: flex;
     flex-direction: column;
-    color: var(--azul);
+    color: #B45CBA;
 }
 
 .informationTextUnder {

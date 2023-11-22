@@ -15,31 +15,31 @@ export const Login = () => {
   const navigate = useNavigate();
   const rdxUserData = useSelector(userData);
   const dispatch = useDispatch();
-  
-  
+
+
   const [user, setUser] = useState({
     email: '',
     password: ''
   })
-  
+
   const [userError, setUserError] = useState({
     emailError: '',
     passwordError: ''
   })
-  
-  useEffect(()=>{
-    if(rdxUserData.credentials.token){
+
+  useEffect(() => {
+    if (rdxUserData.credentials.token) {
       navigate("/")
     }
-  },[rdxUserData])
-  
+  }, [rdxUserData])
+
   const functionHandler = (e) => {
     setUser((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
     }));
   };
-  
+
 
   const errorCheck = (e) => {
 
@@ -82,36 +82,38 @@ export const Login = () => {
         }, 500);
       })
       .catch(error => console.log(error));
-    
+
   }
 
   return (
     <div className="registerDesign">
-      <label>Email</label>
-      <CustomInput
-        disabled={false}
-        design={`inputDesign ${userError.emailError !== "" ? 'inputDesignError' : ''}`}
-        type={"email"}
-        name={"email"}
-        placeholder={""}
-        value={""}
-        functionProp={functionHandler}
-        functionBlur={errorCheck}
-      />
-      <div className='errorMsg'>{userError.emailError}</div>
-      <label>Password</label>
-      <CustomInput
-        disabled={false}
-        design={`inputDesign ${userError.passwordError !== "" ? 'inputDesignError' : ''}`}
-        type={"password"}
-        name={"password"}
-        placeholder={""}
-        value={""}
-        functionProp={functionHandler}
-        functionBlur={errorCheck}
-      />
-      <div className='errorMsg'>{userError.passwordError}</div>
-      <div className='buttonSubmit' onClick={Submit}>Login</div>
+      <div className="login-border">
+        <label>Email</label>
+        <CustomInput
+          disabled={false}
+          design={`inputDesign ${userError.emailError !== "" ? 'inputDesignError' : ''}`}
+          type={"email"}
+          name={"email"}
+          placeholder={""}
+          value={""}
+          functionProp={functionHandler}
+          functionBlur={errorCheck}
+        />
+        <div className='errorMsg'>{userError.emailError}</div>
+        <label>Password</label>
+        <CustomInput
+          disabled={false}
+          design={`inputDesign ${userError.passwordError !== "" ? 'inputDesignError' : ''}`}
+          type={"password"}
+          name={"password"}
+          placeholder={""}
+          value={""}
+          functionProp={functionHandler}
+          functionBlur={errorCheck}
+        />
+        <div className='errorMsg'>{userError.passwordError}</div>
+        <div className='buttonSumbit' onClick={Submit}>Login</div>
+      </div>
     </div>
   );
 };

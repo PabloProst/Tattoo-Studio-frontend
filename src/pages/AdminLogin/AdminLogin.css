@@ -1,0 +1,10 @@
+.admin-login {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 5px red;
+    height: 30em;
+    width: 25em;
+    background-color: rgb(43, 41, 41);
+}

@@ -22,7 +22,7 @@
     width: 8em;
 
     border-radius: 1em;
-    background-color: transparent;
+    background-color: var(--azul);
     color: white;
     font-weight: bolder;
     border: solid 2px var(--azul);
@@ -36,9 +36,8 @@
 .buttonSubmit:hover {
 
     transition: 0.4s;
-    background-color: white;
+    background-color: #B45CBA;
     cursor: pointer;
-    color: var(--azul);
 }
 
 label {
@@ -48,3 +47,14 @@ label {
 input {
     color: white;
 }
+
+.register-border {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: solid 5px var(--azul);
+        width: 25em;
+        height: 30em;
+        background-color: rgb(43, 41, 41);
+    }

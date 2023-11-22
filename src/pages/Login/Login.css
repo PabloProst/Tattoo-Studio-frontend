@@ -13,13 +13,13 @@
     background-color: beige;
 }
 
-.buttonSubmit {
+.buttonSumbit {
 
-    height: 3em;
-    width: 8em;
+    height: 2.5em;
+    width: 7em;
 
     border-radius: 1em;
-    background-color: crimson;
+    background-color: var(--azul);
     color: white;
     font-weight: bolder;
 
@@ -28,9 +28,20 @@
     align-items: center;
 }
 
-.buttonSubmit:hover {
+.buttonSumbit:hover {
 
     transition: 0.4s;
-    background-color: lightcoral;
+    background-color: #B45CBA;
     cursor: pointer;
+}
+
+.login-border {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 5px var(--azul);
+    width: 25em;
+    height: 30em;
+    background-color: rgb(43, 41, 41);
 }
