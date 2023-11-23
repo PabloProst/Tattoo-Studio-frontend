@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: black;
     width: 100vw;
     height: 10em;
+    background-color: black;
 }
 
 .informationText {
@@ -13,7 +13,7 @@
     font-size: 2em;
     display: flex;
     flex-direction: column;
-    color: #B45CBA;
+    color: var(--azul);
 }
 
 .informationTextUnder {

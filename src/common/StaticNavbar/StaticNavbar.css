@@ -27,5 +27,5 @@
 
 .items-navbar:hover {
     cursor: pointer;
-    color: #B45CBA;
+    color: var(--azul);
 }
