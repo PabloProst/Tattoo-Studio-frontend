@@ -27,6 +27,7 @@ export const CreateAppointmentUser = () => {
         try {
             const response = await CreateAppointment(rdxUserData.credentials.token, appointmentData);
             console.log(response.data);
+            alert("CREATED")
         } catch (error) {
             console.error('Error al crear la cita:', error.message);
             console.log(rdxUserData.credentials.token);   

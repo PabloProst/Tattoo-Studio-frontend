@@ -23,6 +23,7 @@ export const Crew = () => {
 
   return (
     <div className='crew-design'>
+      <div className='text-white title-crew'>THE TEAM</div>
       {
         artists.length > 0
         ? ( 

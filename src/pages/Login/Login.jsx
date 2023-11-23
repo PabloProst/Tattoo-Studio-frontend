@@ -72,9 +72,9 @@ export const Login = () => {
 
     logUser({ email, password })
       .then(resultado => {
-        let decodificado = jwtDecode(resultado.data.token);
-        console.log(`token decoded:`);
-        console.log(decodificado);
+        // let decodificado = jwtDecode(resultado.data.token);
+        // console.log(`token decoded:`);
+        // console.log(decodificado);
         dispatch(login({ credentials: resultado.data }));
         console.log(resultado.data);
         setTimeout(() => {

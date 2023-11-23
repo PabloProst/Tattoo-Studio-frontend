@@ -1,6 +1,6 @@
  .bannerHeader {
     position: relative;
-    height: 82vh;
+    height: 100vh;
     overflow: hidden;
   }
   
@@ -16,15 +16,20 @@
     background-repeat: no-repeat;
   }
 
-  .logoPage{
-    width: 120%;
-    height: 120%;
+  .logoPage {
+    position: absolute;
+    width: 25%;
+    height: 45%;
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
   }
 
   @media screen and (max-width: 768px) {
     .logoPage {
         width: 80%;
       }
+ 
       .background-banner{
         
         background-size: cover;
@@ -37,4 +42,48 @@
     .logoPage {
         width: 60%;
 }
+}
+
+.informationDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100vw;
+  height: 90vh;
+  background-color: transparent;
+  
+}
+
+.informationText {
+  color: white;
+  font-family: 'Sancreek', cursive;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  color: var(--azul);
+}
+
+.informationTextUnder {
+  font-size: 0.5em;
+  color: white;
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .informationDiv {
+      flex-direction: column; 
+      height: auto; 
+      padding: 1em; 
+  }
+
+  .informationText {
+      text-align: center; 
+      margin-bottom: 1em; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .informationText {
+      font-size: 1.5em; 
+  }
 }

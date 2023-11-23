@@ -20,7 +20,6 @@ export const StaticNavbar = () => {
     }));
   }
 
-
   return (
     <Navbar expand="lg" className="bg-dark navbarStatic fixed-top">
       <Container className='container-navbar'>
@@ -40,7 +39,7 @@ export const StaticNavbar = () => {
               </>
             ) : (
               <>
-                {rdxCredentials.credentials.role !== "superadmin" && (
+                {rdxCredentials.credentials.role !== "admin" && rdxCredentials.credentials.role !== "superadmin" && (
                   <Nav.Link className='text-navbar items-navbar' href="/appointments">APPOINTMENTS</Nav.Link>
                 )}
                 <Nav.Link className='text-navbar items-navbar' href="/profile">{rdxCredentials.credentials.name}</Nav.Link>

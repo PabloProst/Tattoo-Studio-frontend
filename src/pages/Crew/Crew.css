@@ -10,6 +10,14 @@
 
 .artist-div {
   color: var(--azul);
-  height: 3em;
   font-family: 'Sancreek', cursive;
+  font-size: 2em;
+  height: 2em;
+}
+
+.title-crew {
+  font-family: 'Sancreek', cursive;
+  height: 2em;
+  font-size: 5em;
+  text-decoration: underline var(--azul);
 }
