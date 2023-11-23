@@ -50,7 +50,7 @@ export const AllAppointments = () => {
             </>
           )
           : (
-            <div>Aún no han venido</div>
+            <div>No appointments</div>
           )
       }
     </div>
