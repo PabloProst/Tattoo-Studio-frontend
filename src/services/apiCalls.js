@@ -89,3 +89,10 @@ export const MyArtistAppointments = async (token) => {
     headers: { Authorization: `Bearer ${token}` },
   });
 };
+
+
+export const ModifyAppointment = async (token, appointmentData) => {
+  return await axios.put("http://localhost:3430/appointment/modify", appointmentData, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+};

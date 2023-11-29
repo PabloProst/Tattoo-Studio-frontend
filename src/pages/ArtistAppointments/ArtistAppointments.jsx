@@ -35,7 +35,6 @@ export const ArtistAppointments = () => {
                         <p>DATE: {appointment.date}</p>
                         <p>TIME: {appointment.time}</p>
                         <p>USER: {appointment.user.name}</p>
-                        <div>===========================</div>
                       </div>
                     </div>
                   );

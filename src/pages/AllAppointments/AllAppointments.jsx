@@ -41,7 +41,6 @@ export const AllAppointments = () => {
                         <p>TIME: {appointments.time}</p>
                         <p>ARTIST: {appointments.artist.name}</p>
                         <p>USER: {appointments.user.name}</p>
-                        <p>========================</p>
                       </div>
                     )
                   }
